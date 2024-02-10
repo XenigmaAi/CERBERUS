@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERBERUS - Cryptographic Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+		::-webkit-scrollbar{
+			width: 0;
+		}
+        h1, h2, h3 {
+            color: #007bff;
+			font-weight: bold;
+        }
+		h2{
+			font-size: large;
+		}
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        p {
+            text-align: left;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		h1{
+			font-size: larger;
+		}
+		code{
+			font-family: monospace;
+			font-size: inherit;
+			font-weight: inherit;
+			background-color: #333;
+			color: #f8f9fa;
+			cursor: pointer;
+			padding: 5px;
+			transition: all 0.2s ease-in-out;
+			border-radius: 3px;
+		}
+		code:hover{
+            background-color: #041d30;
+            color: #333;
+        }
+		code .keyword{
+			color: rgb(239, 141, 49);
+		}
+		code .Module{
+			color: rgb(199, 143, 254);
+			font-weight: bold;
+		}
+		code .Variable, .Operator{
+			color: #fff;
+		}
+		code .Parameter{
+			color: rgb(245, 168, 181);
+		}
+		code .Function{
+			color: greenyellow;
+		}
+		span.HighlightT{
+			padding: 2.5px;
+			background-color: #007bff;
+			color: #fff;
+			opacity: 1;
+			border-radius: 2.5px;
+		}
+		code.CopyAnim{
+			background-color: rgb(60, 89, 89);
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CERBERUS - Cryptographic Engine for Robust, Bulletproof, and Unbreakable Security</h1>
+        <p>
+            CERBERUS is a Python program implementing a cryptographic hash function for robust and secure hashing. The name "CERBERUS" is inspired by the mythical three-headed dog guarding the entrance to the underworld in Greek mythology, emphasizing strong and vigilant security.
+        </p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Robust hashing algorithm</li>
+            <li>Implementation of the CERBERUS cryptographic engine</li>
+            <li>Secure password hashing and verification</li>
+        </ul>
+
+        <h2>Getting Started</h2>
+        <p>
+            To start using CERBERUS, follow these steps:
+        </p>
+        <ol>
+            <li>Ensure you have Python <span class="HighlightT">3.10 || ></span> installed on your machine.</li>
+            <li>Download the CERBERUS source code from the official <a>repository</a>.</li>
+            <li>Extract the files to your preferred directory.</li>
+			<li>Import the XenHash file to your program as follows <code><span class="keyword">from</span> <span class="Module">CERBERUS</span> <span class="keyword">import</span> <span class="Module">XenHash</span></code>.</li>
+			<li>Add the Xen function to your program: <code><span class="Variable">Hash</span><span class="Operator"> = </span><span class="Module">XenHash</span><span class="Operator">.</span><span class="Function">Xen</span><span class="Operator">(</span><span class="Parameter">Passw</span><span class="Operator">,</span> <span class="Parameter">"XenBits (512 <span class="Function">OR</span> 256 <span class="Function">OR</span> CR5)"</span><span class="Operator">)</span></code></li>
+			<li>Run the program and you are good to go!</li>
+        </ol>
+
+        <p>
+            You are now ready to use CERBERUS for cryptographic operations and secure password hashing!
+        </p>
+
+        <h2>Contributing</h2>
+        <p>
+            If you're interested in contributing to CERBERUS, please check out the official repository for guidelines and instructions.
+        </p>
+
+        <h2>License</h2>
+        <p>
+            CERBERUS is licensed under the MIT License. See the license file in the repository for details.
+        </p>
+    </div>
+	<script>
+		const CodeElement = document.querySelectorAll("code");
+
+		function CopyTC(CodeToCopy){
+			const Text = CodeToCopy.textContent.trim();
+			navigator.clipboard.writeText(Text);
+		}
+
+		CodeElement.forEach(E => {
+            E.addEventListener("mouseover", () => {
+                E.setAttribute("title", "Click to copy!")
+            });
+			E.addEventListener("click", () => {
+                CopyTC(E);
+				E.classList.add("CopyAnim");
+				setTimeout(() => {
+                    E.classList.remove("CopyAnim");
+                }, 1000);
+            });
+        });
+	</script>
+</body>
+</html>
