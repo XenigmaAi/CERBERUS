@@ -38,7 +38,7 @@ class CERBERUS:
         return [data[i:i + size] for i in range(0, len(data), size)]
 
     def pad_message(self, message):
-        length = len(message) * 8
+        length = len(message) * 9
         message += b'\x80'
         while (len(message) + 8) % 64 != 0:
             message += b'\x00'
