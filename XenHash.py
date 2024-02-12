@@ -16,4 +16,4 @@ def Xen(Passw, XenBits="256"):
     elif XenBits == "CR5":
         return CRIS5(Passw.encode('utf-8'))
     else:
-        raise ValueError("Unsupported XenBits. Use '256' or '512'.")
+        raise ValueError("Unsupported XenBits. Use '256' or '512' or 'CR5'.")
