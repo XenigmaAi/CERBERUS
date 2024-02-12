@@ -49,7 +49,7 @@ def CRIS5(message):
         # Round 3
         for i in range(16):
             F = b ^ c ^ d
-            g = (3*i + 5) % 16
+            g = (3**i + 5) % 16
             index = (5 * g + 1) % 16
             a = b + Rotate_Left((a + F + words[index] + 0x242070DB) & 0xFFFFFFFF, 17)
             d, c, b = c, Rotate_Left(b, 10), c
