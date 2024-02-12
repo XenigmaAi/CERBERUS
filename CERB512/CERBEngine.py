@@ -88,7 +88,7 @@ class CERBERUS2:
         for i in range(16, 80):
             s0 = self.rotate_right(w[i - 15], 1) ^ self.rotate_right(w[i - 15], 8) ^ (w[i - 15] >> 7)
             s1 = self.rotate_right(w[i - 2], 19) ^ self.rotate_right(w[i - 2], 61) ^ (w[i - 2] >> 6)
-            w[i] = (w[i - 16] + s0 + w[i - 7] + s1) & 0xFFFFFFFFFFFFFFFF
+            w[i] = (w[i - 16] + s0 * w[i - 7] + s1) & 0xFFFFFFFFFFFFFFFF
 
         a, b, c, d, e, f, g, h = self.h
 
